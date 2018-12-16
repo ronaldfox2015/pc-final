@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pregunta 1</title>
+</head>
+	<style type="text/css">
+		#center{
+			    color: #E91E63;
+    			background: black;
+				  margin: 1rem;
+				  padding: 1rem;
+				  border: 2px solid #ccc;
+				  /* IMPORTANTE */
+				  text-align: center
+		}
+		.margin{
+			margin-top: 10px;
+		}
+		</style>
+<script type="text/javascript">
+	function toShow() {
+		// body...
+		var f = new Date();
+
+		var nome = document.getElementById("name").value;
+ 		var surname = document.getElementById("surname").value;
+		var year_of_birth = document.getElementById("year_of_birth").value;
+		var edad = f.getFullYear() - year_of_birth ;
+		if(nome != "" && surname !="" && year_of_birth !="" ){
+        	 document.getElementById("show").innerHTML = "hola " + nome + " " + surname+ " tienes "+  edad;
+		}else {
+			alert("ingrese datos");
+		}
+		
+	}
+
+</script>
+<body>
+	<div id="center">
+		<form >
+			<div class="margin" >
+				<label>name</label>
+			</div>
+			<div class="margin" >
+				<input type="text" id="name">
+			</div>
+			<div class="margin" >
+				<label>surname</label>
+			</div>
+			<div class="margin" >
+				<input type="text" id="surname">		
+			</div>
+			<div class="margin" >
+				<label>year of birth</label>
+			</div>
+			<div class="margin" >
+		 		<input type="text" id="year_of_birth">
+			</div>
+
+			<div class="margin" >
+				<input type="button" value="save" onclick="toShow()">
+			</div>
+			<div id="show"></div>
+		</form>
+	</div>
+
+</body>
+</html>
